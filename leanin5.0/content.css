@@ -4,7 +4,7 @@ body {
   padding: 0;
 }
 
-header {
+header {/*adding details */
   background-color: black;
   color: rgb(4, 4, 4);
   padding: 10px 0;
@@ -17,27 +17,28 @@ header {
   float: left; /* Position the logo to the left */
   margin-right: 10px;
   width: 800px;
-  height: 150px;  /* Add spacing between logo and navigation */
+  height: 150px;  /*spacing between logo and navigation */
 }
 
 nav {
-  margin-top:100px; /* Adjust top spacing if needed */
+  margin-top:100px;
 }
 
 
-.container {
+.container { /*adding details */
   max-width: 2000px;
   margin: 0px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 nav {
   display: flex;
 }
 
-nav a {
+nav a {/*adding designs */
   color: white;
   text-decoration: none;
   padding: 10px 10px;
@@ -48,7 +49,7 @@ nav a:hover {
   background-color: #333;
 }
 
-.logo {
+.logo {/*adding details */
   font-size: 30px;
   font-weight: bold;
   color: white;
@@ -70,13 +71,14 @@ h1 {
   margin-bottom: 0px;
 }
 
-.login {
+.my-button {
   background-color: #070707;
   color: rgb(230, 202, 254);
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 50px;
 }
 
 .people-images {
@@ -93,10 +95,6 @@ h1 {
 
   
 }
-
-
-
-
 
 footer {
   background-color: #020202;
