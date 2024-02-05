@@ -1,1 +1,0 @@
-# LEAN-IN-HACKS-5.0
