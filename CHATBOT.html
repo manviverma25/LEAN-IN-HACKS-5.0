@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot Example</title>
+<style>
+  /* Styles for the chatbot container */
+  #chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  /* Styles for chat messages */
+  .chat-message {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #eaeaea;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Styles for user input */
+  #user-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  /* Styles for send button */
+  #send-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="chatbot-container">
+  <div id="chat-messages"></div>
+  <input type="text" id="user-input" placeholder="Type your message...">
+  <button id="send-button">Send</button>
+</div>
+
+<script>
+  // Get DOM elements
+  const chatMessages = document.getElementById('chat-messages');
+  const userInput = document.getElementById('user-input');
+  const sendButton = document.getElementById('send-button');
+
+  // Function to add message to the chat
+  function addMessage(message, sender) {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('chat-message');
+    messageElement.textContent = `${sender}: ${message}`;
+    chatMessages.appendChild(messageElement);
+  }
+
+  // Event listener for send button click
+  sendButton.addEventListener('click', () => {
+    const userMessage = userInput.value;
+    addMessage(userMessage, 'You');
+    // You can implement logic here to send the user message to a server for processing
+    // and get the response from the server to display it in the chat
+    userInput.value = '';
+  });
+
+  // Simulate initial greeting from the chatbot
+  setTimeout(() => {
+    addMessage('Hello! How can I assist you today?', 'Chatbot');
+  }, 500);
+</script>
+
+</body>
+</html>
